@@ -14,7 +14,7 @@ import java.awt.event.ActionListener;
 import java.rmi.RemoteException;
 import java.awt.event.ActionEvent;
 
-public class createAlumnoWindow {
+public class AgregarAlumnoWindow {
 
 	private JFrame frame;
 	private JTextField txtNombre;
@@ -24,11 +24,11 @@ public class createAlumnoWindow {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void nuevoAlumno() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					createAlumnoWindow window = new createAlumnoWindow();
+					AgregarAlumnoWindow window = new AgregarAlumnoWindow();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class createAlumnoWindow {
 	/**
 	 * Create the application.
 	 */
-	public createAlumnoWindow() {
+	public AgregarAlumnoWindow() {
 		initialize();
 	}
 

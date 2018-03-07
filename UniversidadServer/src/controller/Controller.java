@@ -4,9 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import business.*;
-import dao.*;
 import dto.*;
-import entity.*;
 
 public class Controller {
 
@@ -36,6 +34,13 @@ public class Controller {
 		a.setNombre(alumno.getNombre());
 		a.setEstado(alumno.getEstado());
 		a.save();
+	}
+
+	public void agregarMateria(MateriaVO materia) {
+		Materia m = new Materia();
+		m.setNombre(materia.getNombre());
+		m.setNumero(materia.getNumero());
+		m.save();
 	}
 	
 	

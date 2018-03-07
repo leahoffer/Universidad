@@ -2,3 +2,6 @@
 /controller/
 /entity/
 /hibernate.properties
+/business/
+/dao/
+/hibernate/

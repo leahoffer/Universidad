@@ -4,6 +4,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 
 import dto.AlumnoVO;
+import dto.MateriaVO;
 import tda.TDABusiness;
 
 public class BusinessDelegate implements TDABusiness {
@@ -35,6 +36,11 @@ public class BusinessDelegate implements TDABusiness {
 	@Override
 	public void agregarAlumno(AlumnoVO alumno) throws RemoteException {
 		RemoteObject.agregarAlumno(alumno);
+	}
+	@Override
+	public void agregarMateria(MateriaVO materia) throws RemoteException {
+		RemoteObject.agregarMateria(materia);
+		
 	}
 	
 
