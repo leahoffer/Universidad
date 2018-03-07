@@ -1,5 +1,7 @@
 package business;
 
+import entity.AlumnoEntity;
+
 public class Alumno {
 	
 	int legajo;
@@ -30,5 +32,9 @@ public class Alumno {
 		this.estado = estado;
 	}
 	
-
+	public AlumnoEntity toEntity() {
+		AlumnoEntity ae = new AlumnoEntity(this.legajo, this.nombre, this.estado);
+		return ae;
+	}
+	
 }

@@ -1,8 +1,6 @@
-package business;
+package entity;
 
-import entity.DireccionEntity;
-
-public class Direccion {
+public class DireccionEntity {
 
 	String calle;
 	int numero;
@@ -12,6 +10,20 @@ public class Direccion {
 	String depto;
 	
 	
+	
+	public DireccionEntity(String calle, int numero, String cp, String localidad, int piso, String depto) {
+		super();
+		this.calle = calle;
+		this.numero = numero;
+		this.cp = cp;
+		this.localidad = localidad;
+		this.piso = piso;
+		this.depto = depto;
+	}
+	
+	public DireccionEntity() {
+	}
+
 	public String getCalle() {
 		return calle;
 	}
@@ -49,10 +61,6 @@ public class Direccion {
 		this.depto = depto;
 	}
 	
-	public DireccionEntity toEntity() {
-		DireccionEntity de = new DireccionEntity(this.calle, this.numero, this.cp, this.localidad, this.piso, this.depto);
-		return de;
-	}
 	
 	
 }
