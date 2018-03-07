@@ -5,10 +5,10 @@ import java.util.Set;
 
 public class Profesor {
 
-	int numeroLegajo;
-	String nombre;
-	Direccion direccion;
-	Set<Materia> materias;
+	private int numeroLegajo;
+	private String nombre;
+	private Direccion direccion;
+	private Set<Materia> materias;
 	
 	public Profesor() {
 		this.materias = new HashSet<Materia>();

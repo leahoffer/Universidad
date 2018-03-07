@@ -1,12 +1,15 @@
 package entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Alumnos")
-public class AlumnoEntity {
+public class AlumnoEntity implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	int legajo;
 	String nombre;
 	String estado;

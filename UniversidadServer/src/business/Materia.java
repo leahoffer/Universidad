@@ -2,8 +2,8 @@ package business;
 
 public class Materia {
 
-	String numero;
-	String nombre;
+	private String numero;
+	private String nombre;
 	
 	
 	public String getNumero() {

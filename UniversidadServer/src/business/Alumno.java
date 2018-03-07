@@ -4,9 +4,9 @@ import entity.AlumnoEntity;
 
 public class Alumno {
 	
-	int legajo;
-	String nombre;
-	String estado;
+	private int legajo;
+	private String nombre;
+	private String estado;
 	
 	public int getLegajo() {
 		return legajo;

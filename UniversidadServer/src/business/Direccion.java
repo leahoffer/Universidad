@@ -4,12 +4,12 @@ import entity.DireccionEntity;
 
 public class Direccion {
 
-	String calle;
-	int numero;
-	String cp;
-	String localidad;
-	int piso;
-	String depto;
+	private String calle;
+	private int numero;
+	private String cp;
+	private String localidad;
+	private int piso;
+	private String depto;
 	
 	
 	public String getCalle() {

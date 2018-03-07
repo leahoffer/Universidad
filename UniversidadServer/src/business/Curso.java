@@ -5,11 +5,11 @@ import java.util.Set;
 
 public class Curso {
 	
-	int numeroCurso;
-	Materia materia;
-	Profesor profesor;
-	Set<Alumno> alumnos;
-	int cantidadMaxima;
+	private int numeroCurso;
+	private Materia materia;
+	private Profesor profesor;
+	private Set<Alumno> alumnos;
+	private int cantidadMaxima;
 	
 	public Curso() {
 		this.alumnos = new HashSet<Alumno>();

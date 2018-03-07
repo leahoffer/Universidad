@@ -1,13 +1,22 @@
 package entity;
 
-public class DireccionEntity {
+import java.io.Serializable;
 
-	String calle;
-	int numero;
-	String cp;
-	String localidad;
-	int piso;
-	String depto;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+
+@Entity
+@Embeddable
+public class DireccionEntity implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	
+	private String calle;
+	private int numero;
+	private String cp;
+	private String localidad;
+	private int piso;
+	private	String depto;
 	
 	
 	
