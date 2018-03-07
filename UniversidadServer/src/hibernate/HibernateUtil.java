@@ -1,9 +1,9 @@
-package hbt;
+package hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
 
-import bean.Usuario;
+import entity.*;
  
 public class HibernateUtil
 {
@@ -13,7 +13,7 @@ public class HibernateUtil
         try
         {
         	 AnnotationConfiguration config = new AnnotationConfiguration();
-             config.addAnnotatedClass(Usuario.class);
+             config.addAnnotatedClass(AlumnoEntity.class);
              sessionFactory = config.buildSessionFactory();
         }
         catch (Throwable ex)
