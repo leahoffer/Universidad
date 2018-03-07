@@ -16,10 +16,10 @@ public class RemoteObject extends UnicastRemoteObject implements TDABusiness {
 		super();
 	}
 
-	@Override
-	public void saveAlumno(AlumnoVO alumno)
+	
+	public void agregarAlumno(AlumnoVO alumno)
 	{
-		Controller.getInstance().saveAlumno(alumno);
+		Controller.getInstance().agregarAlumno(alumno);
 	}
 
 }

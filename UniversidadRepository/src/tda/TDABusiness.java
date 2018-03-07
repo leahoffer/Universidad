@@ -7,6 +7,6 @@ import dto.*;
 
 public interface TDABusiness extends Remote {
 	
-	public void saveAlumno(AlumnoVO alumno) throws RemoteException;
+	public void agregarAlumno(AlumnoVO alumno) throws RemoteException;
 
 }

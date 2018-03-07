@@ -30,7 +30,7 @@ public class Controller {
 		this.materias = new HashSet<Materia>();
 	}
 
-	public void saveAlumno(AlumnoVO alumno) {
+	public void agregarAlumno(AlumnoVO alumno) {
 		Alumno a = new Alumno();
 		a.setLegajo(alumno.getLegajo());
 		a.setNombre(alumno.getNombre());

@@ -17,10 +17,11 @@ public class Server {
 	{
 		try
 		{
+			System.out.println("Publishing Remote Object...");
 			LocateRegistry.createRegistry(1099);
 			RO = new RemoteObject();
 			Naming.rebind("//localhost/RemoteObject", RO);
-			System.out.println("Remote Object successfullt published");
+			System.out.println("Remote Object successfully published!");
 		}
 		catch (Exception e)
 		{

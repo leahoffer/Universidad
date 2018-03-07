@@ -34,7 +34,8 @@ public class BusinessDelegate implements TDABusiness {
 	
 	@Override
 	public void agregarAlumno(AlumnoVO alumno) throws RemoteException {
-		RemoteObject.saveAlumno();
+		RemoteObject.agregarAlumno(alumno);
 	}
+	
 
 }
