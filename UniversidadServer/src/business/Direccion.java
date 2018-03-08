@@ -11,7 +11,19 @@ public class Direccion {
 	private int piso;
 	private String depto;
 	
+	public Direccion() {
+	}
 	
+	/*CONSTRUCTOR*/
+	public Direccion(String calle, int numero, String cp, String localidad, int piso, String depto) {
+		super();
+		this.calle = calle;
+		this.numero = numero;
+		this.cp = cp;
+		this.localidad = localidad;
+		this.piso = piso;
+		this.depto = depto;
+	}
 	public String getCalle() {
 		return calle;
 	}

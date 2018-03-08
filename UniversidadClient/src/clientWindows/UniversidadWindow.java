@@ -1,4 +1,4 @@
-package ClientWindow;
+package clientWindows;
 
 import java.awt.EventQueue;
 
@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
-import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -82,5 +81,14 @@ public class UniversidadWindow {
 		lblMaterias.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblMaterias.setBounds(10, 191, 66, 26);
 		frame.getContentPane().add(lblMaterias);
+		
+		JLabel lblProfesores = new JLabel("Profesores");
+		lblProfesores.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblProfesores.setBounds(275, 66, 80, 18);
+		frame.getContentPane().add(lblProfesores);
+		
+		JButton btnAgregarProfesor = new JButton("AGREGAR PROFESOR");
+		btnAgregarProfesor.setBounds(275, 95, 148, 23);
+		frame.getContentPane().add(btnAgregarProfesor);
 	}
 }

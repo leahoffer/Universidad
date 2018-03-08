@@ -1,19 +1,16 @@
 package controller;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import business.*;
 import dto.*;
 
 public class Controller {
 
 	private static Controller instance;
-	private Set<Alumno> alumnos;
+	/*private Set<Alumno> alumnos;
 	private Set<Profesor> profesores;
 	private Set<Curso> cursos;
 	private Set<Materia> materias;
-	
+	*/
 	
 	public static Controller getInstance() {
 		if(instance == null)
@@ -22,10 +19,11 @@ public class Controller {
 	}
 	
 	private Controller() {
-		this.alumnos = new HashSet<Alumno>();
+		/*this.alumnos = new HashSet<Alumno>();
 		this.profesores = new HashSet<Profesor>();
 		this.cursos = new HashSet<Curso>();
 		this.materias = new HashSet<Materia>();
+		*/
 	}
 
 	public void agregarAlumno(AlumnoVO alumno) {
@@ -41,6 +39,15 @@ public class Controller {
 		m.setNombre(materia.getNombre());
 		m.setNumero(materia.getNumero());
 		m.save();
+	}
+
+	public void agregarProfesor(ProfesorVO profesor) {
+		Profesor p = new Profesor();
+		Direccion d = new Direccion(profesor.getDireccion().getCalle(), profesor.getDireccion().getNumero(), profesor.getDireccion().getCp(), profesor.getDireccion().getLocalidad(), profesor.getDireccion().getPiso(), profesor.getDireccion().getDepto());
+		p.setNombre(profesor.getNombre());
+		p.setNumeroLegajo(profesor.getNumeroLegajo());
+		p.setDireccion(d);
+		p.save();
 	}
 	
 	

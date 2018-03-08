@@ -1,15 +1,8 @@
-package entity;
+package dto;
 
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Embeddable
-public class DireccionEntity implements Serializable{
-
+public class DireccionVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String calle;
@@ -17,12 +10,23 @@ public class DireccionEntity implements Serializable{
 	private String cp;
 	private String localidad;
 	private int piso;
-	private	String depto;
-
+	private String depto;
 	
-	public DireccionEntity() {
+	
+	/*CONSTRUCTOR*/
+	public DireccionVO() {
 	}
-
+	/*CONSTRUCTOR*/
+	public DireccionVO(String calle, int numero, String cp, String localidad, int piso, String depto) {
+		super();
+		this.calle = calle;
+		this.numero = numero;
+		this.cp = cp;
+		this.localidad = localidad;
+		this.piso = piso;
+		this.depto = depto;
+	}
+	/*GETTERS AND SETTERS*/
 	public String getCalle() {
 		return calle;
 	}
@@ -59,7 +63,6 @@ public class DireccionEntity implements Serializable{
 	public void setDepto(String depto) {
 		this.depto = depto;
 	}
-	
 	
 	
 }

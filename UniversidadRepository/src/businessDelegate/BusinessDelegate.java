@@ -4,7 +4,9 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 
 import dto.AlumnoVO;
+import dto.CursoVO;
 import dto.MateriaVO;
+import dto.ProfesorVO;
 import tda.TDABusiness;
 
 public class BusinessDelegate implements TDABusiness {
@@ -40,6 +42,31 @@ public class BusinessDelegate implements TDABusiness {
 	@Override
 	public void agregarMateria(MateriaVO materia) throws RemoteException {
 		RemoteObject.agregarMateria(materia);
+		
+	}
+	@Override
+	public void agregarProfesor(ProfesorVO profesor) throws RemoteException {
+		RemoteObject.agregarProfesor(profesor);
+		
+	}
+	@Override
+	public void eliminarAlumno(AlumnoVO alumno) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void eliminarCurso(CursoVO curso) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void eliminarMateria(MateriaVO materia) throws RemoteException {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void eliminarProfesor(ProfesorVO profesor) throws RemoteException {
+		// TODO Auto-generated method stub
 		
 	}
 	

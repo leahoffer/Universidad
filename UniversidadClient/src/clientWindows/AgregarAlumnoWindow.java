@@ -1,4 +1,4 @@
-package ClientWindow;
+package clientWindows;
 
 import java.awt.EventQueue;
 

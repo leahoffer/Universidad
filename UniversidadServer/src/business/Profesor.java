@@ -1,17 +1,22 @@
 package business;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.ProfesorDAO;
+import entity.MateriaEntity;
+import entity.ProfesorEntity;
 
 public class Profesor {
 
 	private int numeroLegajo;
 	private String nombre;
 	private Direccion direccion;
-	private Set<Materia> materias;
+	private List<Materia> materias;
 	
 	public Profesor() {
-		this.materias = new HashSet<Materia>();
+		this.materias = new ArrayList<Materia>();
+		this.direccion = new Direccion();
 	}
 
 	public int getNumeroLegajo() {
@@ -38,15 +43,30 @@ public class Profesor {
 		this.direccion = direccion;
 	}
 
-	public Set<Materia> getMaterias() {
+	public List<Materia> getMaterias() {
 		return materias;
 	}
 
-	public void setMaterias(Set<Materia> materias) {
+	public void setMaterias(List<Materia> materias) {
 		this.materias = materias;
 	}
 	
-	
+	public ProfesorEntity toEntity()
+	{
+		ProfesorEntity pe = new ProfesorEntity();
+		List<MateriaEntity> mes = new ArrayList<MateriaEntity>();
+		pe.setNombre(this.nombre);
+		pe.setNumeroLegajo(this.numeroLegajo);
+		pe.setDireccion(this.direccion.toEntity());
+		for(Materia m : this.materias)
+			mes.add(m.toEntity());
+		return pe;
+	}
+
+	public void save() {
+		ProfesorDAO.getInstance().saveProfesor(this.toEntity());
+		
+	}
 	
 	
 }

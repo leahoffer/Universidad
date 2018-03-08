@@ -15,6 +15,9 @@ public class HibernateUtil {
 	        	 AnnotationConfiguration config = new AnnotationConfiguration();
 	        	 config.addAnnotatedClass(AlumnoEntity.class);
 	        	 config.addAnnotatedClass(MateriaEntity.class);
+	        	 config.addAnnotatedClass(ProfesorEntity.class);
+	        	 config.addAnnotatedClass(DireccionEntity.class);
+	        	 config.addAnnotatedClass(CursoEntity.class);
 	             sessionFactory = config.buildSessionFactory();
 	        }
 	        catch (Throwable ex)
